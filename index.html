@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SENTENCE! - Bienvenidos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&family=Roboto+Slab:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="musicaFondo" src="/sonido/sala_principal.mp3" loop preload="auto"></audio>
+    <audio id="hoverSound" src="/sonido/hover.mp3" preload="auto"></audio>
+    <audio id="selectSound" src="/sonido/SELEC.mp3" preload="auto"></audio>
+
+    <main class="container">
+        <header class="intro">
+            <h1 class="title">SENTENCE!</h1>
+            <p class="tag" id="typewriter">Un juego de palabras, tinta y decisiones.</p>
+        </header>
+
+        <section class="paper">
+            <p class="lead">Bienvenido, escritor. Antes de comenzar, afina tu pluma.</p>
+
+      <nav class="menu">
+                <a href="/juego.html" class="btn" id="btnJugar">Jugar</a>
+                <a href="/records.html" class="btn" id="btnRecords">Records</a>
+                <a href="/acerca.html" class="btn" id="btnAcerca">Acerca de</a>
+                <a href="/opciones.html" class="btn" id="btnOpciones">Opciones</a>
+            </nav>
+
+            <div class="meta">
+                <span>Versión 1.0</span> · <span>© Sentence</span>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>"Mi pluma lo mató" – <strong>Juan Montalvo</strong></p>
+        </footer>
+    </main>
+
+    <script type="module" src="/src/main-menu.js"></script>
+</body>
+</html>

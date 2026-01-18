@@ -1,0 +1,67 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acerca de - Sentence</title>
+</head>
+<body>
+  <audio id="musicaFondo" src="/sonido/sala_principal.mp3" loop preload="auto"></audio>
+
+  <main class="container acerca-container">
+    <header class="intro">
+      <h1 class="title">Acerca de</h1>
+      <p class="tag">Conoce las reglas del juego</p>
+    </header>
+
+    <section class="paper acerca-paper">
+      <div class="acerca-contenido">
+        <div class="regla">
+          <h3>Objetivo</h3>
+          <p>Escribe el texto EXACTAMENTE como aparece en pantalla.</p>
+        </div>
+
+        <div class="regla">
+          <h3>Sistema de Errores</h3>
+          <p>Puedes cometer hasta <strong>3 ERRORES</strong> antes de entrar en un sorteo de vida o muerte.</p>
+        </div>
+
+        <div class="regla">
+          <h3>Ruleta Rusa</h3>
+          <p>Al tercer error se activa el <strong>SORTEO VIVES/MUERES</strong></p>
+          <p>Las probabilidades disminuyen progresivamente:</p>
+          <ul>
+            <li>1/5 (20% de muerte)</li>
+            <li>1/4 (25% de muerte)</li>
+            <li>1/3 (33% de muerte)</li>
+            <li>1/2 (50% de muerte)</li>
+            <li>1/1 (100% de muerte - GAME OVER)</li>
+          </ul>
+        </div>
+
+        <div class="regla">
+          <h3>Cronometro</h3>
+          <p>El cronometro se pausa automaticamente durante los videos.</p>
+        </div>
+
+        <div class="regla">
+          <h3>Restricciones</h3>
+          <p>No puedes copiar y pegar. El juego detecta esta accion.</p>
+        </div>
+
+        <div class="regla">
+          <h3>Modos de Juego</h3>
+          <p><strong>Aleatorio:</strong> El sistema elige una frase al azar.</p>
+          <p><strong>Seleccion:</strong> Tu eliges la frase que quieres transcribir.</p>
+        </div>
+      </div>
+
+      <nav class="menu menu-acerca">
+        <a href="/index.html" class="btn">Volver al Menu</a>
+      </nav>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main-menu.js"></script>
+</body>
+</html>

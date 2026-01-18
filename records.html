@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Records - Sentence</title>
+</head>
+<body>
+  <audio id="musicaFondo" src="/sonido/sala_principal.mp3" loop preload="auto"></audio>
+
+  <main class="container records-container">
+    <header class="intro">
+      <h1 class="title">Récords</h1>
+      <p class="tag">Los mejores tiempos registrados</p>
+    </header>
+
+    <section class="paper">
+      <div class="filtros-records">
+        <div class="filtro-grupo">
+          <label for="filtroModo">Modo:</label>
+          <select id="filtroModo" class="select-modo">
+            <option value="todos">Todos</option>
+            <option value="random">Aleatorio</option>
+            <option value="seleccion">Selección</option>
+          </select>
+        </div>
+
+        <div class="filtro-grupo" id="grupoFrase" style="display: none;">
+          <label for="filtroFrase">Frase:</label>
+          <select id="filtroFrase" class="select-frase">
+            <option value="todas">Todas</option>
+          </select>
+        </div>
+
+        <button class="btn-filtrar" id="btnFiltrar">Filtrar</button>
+        <button class="btn-reset" id="btnResetRecords">Resetear Récords</button>
+      </div>
+
+      <div class="tabla-records" id="tablaRecords">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Nombre</th>
+              <th>Tiempo</th>
+              <th>Errores</th>
+              <th>Muertes</th>
+              <th>Modo</th>
+              <th>Fecha</th>
+            </tr>
+          </thead>
+          <tbody id="tbodyRecords">
+            <tr>
+              <td colspan="7" class="no-records">No hay récords registrados</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <nav class="menu">
+        <a href="/index.html" class="btn">Volver al Menú</a>
+      </nav>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main-records.js"></script>
+</body>
+</html>

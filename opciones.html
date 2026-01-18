@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Opciones - Sentence</title>
+</head>
+<body>
+    <audio id="musicaFondo" src="/sonido/sala_principal.mp3" loop preload="auto"></audio>
+    <audio id="hoverSound" src="/sonido/hover.mp3" preload="auto"></audio>
+    <audio id="selectSound" src="/sonido/SELEC.mp3" preload="auto"></audio>
+
+    <main class="container">
+        <header class="intro">
+            <h1 class="title">Opciones</h1>
+        </header>
+
+        <section class="paper">
+            <p class="lead">Ajusta el volumen del juego según tu preferencia.</p>
+
+            <div class="slider-box">
+                <label for="volumenfondo">Volumen de fondo:</label>
+                <input type="range" id="volumenfondo" min="0" max="1" step="0.01">
+            </div>
+
+            <div class="slider-box">
+                <label for="botonvolumen">Volumen de botones:</label>
+                <input type="range" id="botonvolumen" min="0" max="1" step="0.01">
+            </div>
+
+            <nav class="menu">
+                <a href="/index.html" class="btn" id="btnVolver">Volver</a>
+            </nav>
+        </section>
+    </main>
+
+    <script type="module" src="/src/main-menu.js"></script>
+</body>
+</html>

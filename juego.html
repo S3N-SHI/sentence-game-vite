@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transcripcion Extrema - Ruleta Rusa</title>
+</head>
+
+<body>
+  <audio id="killSound" src="/sonido/kill.mp3" loop preload="auto"></audio>
+
+  <div class="game-container">
+    <h1>SENTENCE!</h1>
+
+    <!-- Selector de Modo -->
+    <div class="modo-selector" id="modoSelector">
+      <h2>Selecciona el Modo de Juego</h2>
+      <div class="modo-buttons">
+        <button class="btn-modo" id="btnModoRandom">
+          <span class="modo-icono">🎲</span>
+          <span class="modo-titulo">Aleatorio</span>
+          <span class="modo-desc">Frase sorpresa</span>
+        </button>
+        <button class="btn-modo" id="btnModoSeleccion">
+          <span class="modo-icono">📝</span>
+          <span class="modo-titulo">Seleccion</span>
+          <span class="modo-desc">Elige tu frase</span>
+        </button>
+      </div>
+      <div class="volver-menu-container">
+        <a href="/index.html" class="btn-volver-menu">Volver al Menu</a>
+      </div>
+    </div>
+
+    <!-- Selector de Frase (modo seleccion) -->
+    <div class="frase-selector" id="fraseSelector" style="display: none;">
+      <h2>Elige una Frase</h2>
+      <div class="frases-lista" id="frasesLista">
+        <!-- Frases se cargan dinamicamente -->
+      </div>
+      <div class="selector-buttons">
+        <button class="btn-selector btn-jugar" id="btnJugarFrase" disabled>Jugar</button>
+        <button class="btn-selector btn-volver" id="btnVolverModo">Volver</button>
+      </div>
+    </div>
+
+    <!-- Confirmacion Random -->
+    <div class="random-confirm" id="randomConfirm" style="display: none;">
+      <h2>Modo Aleatorio</h2>
+      <p>Se te asignara una frase al azar</p>
+      <div class="selector-buttons">
+        <button class="btn-selector btn-jugar" id="btnJugarRandom">Jugar</button>
+        <button class="btn-selector btn-volver" id="btnVolverModoRandom">Volver</button>
+      </div>
+    </div>
+
+    <!-- HUD del juego -->
+    <div class="hud" style="display: none;" id="hud">
+      <div class="hud-item">
+        <div class="hud-label">TIEMPO</div>
+        <div class="hud-value" id="tiempo">00:00</div>
+      </div>
+      <div class="hud-item">
+        <div class="hud-label">RULETA</div>
+        <div class="hud-value" id="probabilidad">1/5</div>
+      </div>
+      <div class="hud-item">
+        <div class="hud-label">ERRORES</div>
+        <div class="hud-value" id="contadorErrores">0/3</div>
+        <div class="errores-barra">
+          <div class="error-dot" id="error1"></div>
+          <div class="error-dot" id="error2"></div>
+          <div class="error-dot" id="error3"></div>
+        </div>
+      </div>
+      <div class="hud-item">
+        <div class="hud-label">PROGRESO</div>
+        <div class="hud-value" id="progreso">0%</div>
+      </div>
+    </div>
+
+    <div class="texto-container" id="textoContainer" style="display: none;">
+      <div class="texto-original" id="textoOriginal"></div>
+      <div class="texto-usuario-overlay" id="textoUsuarioOverlay"></div>
+    </div>
+
+    <textarea id="entradaUsuario" spellcheck="false"></textarea>
+
+    <div class="victoria" id="victoria">
+      <h2>SOBREVIVISTE</h2>
+      <p id="tiempoFinal"></p>
+      <p id="estadisticas"></p>
+      <button class="btn-iniciar" onclick="location.reload()">Jugar de nuevo</button>
+    </div>
+  </div>
+
+  <div class="countdown-overlay" id="countdown" style="display: none;">
+    <div class="countdown-number" id="countdownNumber">3</div>
+  </div>
+
+  <div class="video-overlay" id="videoOverlay">
+    <video id="videoPlayer"></video>
+    <div class="video-info" id="videoInfo"></div>
+  </div>
+
+  <div class="game-over" id="gameOver">
+    <h2>GAME OVER</h2>
+    <p id="mensajeGameOver">Valio Vrg</p>
+    <button onclick="location.reload()">Intentar de nuevo</button>
+  </div>
+
+  <script type="module" src="/src/main-game.js"></script>
+</body>
+
+</html>
